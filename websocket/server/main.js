@@ -12,6 +12,7 @@ var messages = [{
 
 app.use(express.static('public'));
 
+//PARA ESCUCHAR LOS SOCKETS:
 io.on('connection', function (socket) {
     console.log('Alguien se ha conectado con Sockets');
 
@@ -29,5 +30,5 @@ io.on('connection', function (socket) {
 });
 
 server.listen(8080, function(){
-    console.log("Servidor corriendo en http://localhost:8080/hello");
+    console.log("Servidor corriendo en http://localhost:8080");
 });
