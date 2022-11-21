@@ -1,0 +1,54 @@
+body {
+    background-color: #59625f;
+}
+
+.titulo {
+    color: #01e0bb;
+    font-size: 32px;
+}
+
+.subtitulo {
+    color: #5bccde;
+    font-size: 20px;
+}
+
+.mandar-mensaje {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+#messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background: #829ba5;
+    box-sizing: border-box;
+    border-radius: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.boton-imprimir {
+    background-color: #43919B;
+    border: 2px solid;
+    border-radius: 20px;
+    box-sizing: border-box;
+    color: #00FFC6;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100px;
+    height: 40px;
+}
+
+.entrada {
+    background-color: #b5f8f9;
+    border: 2px solid;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    padding: 10px;
+    width: 500px;
+    height: 40px;
+}

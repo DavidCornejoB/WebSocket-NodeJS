@@ -22,11 +22,14 @@ io.on('connection', function (socket) {
     //ESCUCHAR MENSAJE DESDE CLIENTE
     socket.on('new-message', function(data){
         messages.push(data);
-
         io.sockets.emit('messages', messages);
-
-        //AQUI SE MANDA A IMPRIMIR A LA IMPRESORA (data)
     });
+
+    //MANDAR MENSAJE A LA IMPRESORA
+    socket.on('imprimir', function(data){
+        socket.emit('imprimir-mensaje', data);
+    });
+
 });
 
 server.listen(8080, function(){

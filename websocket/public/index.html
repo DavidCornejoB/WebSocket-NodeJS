@@ -5,17 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi aplicación con Sockets</title>
+    <link  rel="stylesheet" href="styles.css">
     <script src="socket.io/socket.io.js"></script>
     <script src="main.js"></script>
+    <script src="imprimir.js"></script>
+
 </head>
 <body>
-    <h1>My App</h1>
+    <h1 class="titulo">Envío, recepción e impresión de mensajes</h1>
+
+    <h2 class="subtitulo">Luis David Cornejo </h2>
     <div id="messages"></div>
 
-    <form onsubmit="return addMessage(this)">
-        <input type="text" id="username" placeholder="Nombre del emisor">        
-        <input type="text" id="texto" placeholder="Mensaje a imprimir">
-        <input type="submit" value="imprimir">
-    </form>
+    <div class="mandar-mensaje">
+        <form onsubmit="return addMessage(this)">
+            <input class="entrada" type="text" id="username" placeholder="Nombre del emisor">        
+            <input class="entrada" type="text" id="texto" placeholder="Mensaje a imprimir">
+            <input class="boton-imprimir" type="submit" value="IMPRIMIR">
+        </form>
+    </div>
+
+    <div class="mandar-mensaje">
+        <form onsubmit="return printMessage(this)">
+            <input class="entrada" type="text" id="texto-imprimir" placeholder="Mensaje a imprimir">
+            <input class="boton-imprimir" type="submit" value="IMPRIMIR">
+        </form>
+    </div>
+
 </body>
 </html>

@@ -39,3 +39,17 @@ function addMessage(e) {
     socket.emit('new-message', payload);
     return false;
 }
+
+/**
+ * FUNCIÓN QUE ENVIA UN MENSAJE DESDE EL CLIENTE AL SERVIDOR PARA IMPRIMIR
+ * @param {*} e 
+ * @returns 
+ */
+function printMessage(e) {
+    var payload = {
+        text: document.getElementById('texto-imprimir').value
+    };
+
+    socket.emit('imprimir', payload);
+    return false;
+}
